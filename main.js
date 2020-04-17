@@ -12,6 +12,7 @@ document.querySelector(".action").onclick = function(){
     let roles_massiv = ["Мафия", "Комисар" , "Доктор"]; 
     let mafia = Math.floor(kolichestvo_user / 3);
     let random_element_massiv = "";
+    document.querySelector("p").innerHTML = "";
     while (roles_massiv.length  != mafia + 2) {
         roles_massiv.push("Мафия");
     }
