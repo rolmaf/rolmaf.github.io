@@ -1,12 +1,35 @@
-.action {
+button {
     margin: 10px;
-    padding: 10px;
-    width: 150px;
+    /* padding: 8px; */
+    width: 200px;
 }
 .user-form {
+    width: 200px;
+}
+#user-form {    
     margin: 10px;
-    width: 150px;
 }
 p {
     margin: 10px;
+}
+.hiden {
+    display: none;
+}
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+.mafia-new{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: -15px;
+}
+li {
+    margin-left: 5px;
+}
+input[type = "checkbox"] {
+    margin: 5px;
+}
+label {
+    margin-top: 6px;
 }

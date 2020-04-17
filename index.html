@@ -9,11 +9,29 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="form-row">
+    <div class="form-row">  
         <div class="col-1">
-          <input type="text" class="form-control user-form" placeholder="5">
+          <input type="number" class="form-control user-form" id="user-form" placeholder="5" required>
         </div>
     </div>
+    <div class="settings hiden">
+        <ul>
+        <li><label>Мафия</label><input type="number" class="form-control user-form mafia mafia-new" placeholder="5" required></li>
+        <li>Мирные жители<input type="number" class="form-control user-form people mafia-new" placeholder="5"></li>
+        <li>Маньяк<input type="checkbox" class="manjak"></li>
+        <br>
+        <li>Комисар<input type="checkbox" class="komisar"></li>
+        <br>
+        <li>Доктор<input type="checkbox" class="doctor"></li>
+        <br>
+        <li>Шериф<input type="checkbox" class="sherif"></li>
+        <br>
+        <li>Бабочка<input type="checkbox" class="babochka"></li>
+        <br>
+        </ul>
+    </div>
+    <button type="button" class="btn btn-dark button-action">Настроить вручную</button>
+    <br>
     <button type="button" class="btn btn-primary action">Получить роли</button>
     <p></p>
     <!-- scripts -->
