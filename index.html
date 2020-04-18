@@ -12,7 +12,6 @@
     <meta name="robots" content="index, follow" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <meta name="yandex-verification" content="fce809e45632f902" />
 </head>
 <body>
     <div class="form-row">  
@@ -22,24 +21,47 @@
     </div>
     <div class="settings hiden">
         <ul>
-        <li><label>Мафия</label><input type="number" class="form-control user-form mafia mafia-new" placeholder="5" required></li>
-        <li>Мирные жители<input type="number" class="form-control user-form people mafia-new" placeholder="5"></li>
-        <li>Маньяк<input type="checkbox" class="manjak"></li>
-        <br>
-        <li>Комиссар<input type="checkbox" class="komisar"></li>
-        <br>
-        <li>Доктор<input type="checkbox" class="doctor"></li>
-        <br>
-        <li>Шериф<input type="checkbox" class="sherif"></li>
-        <br>
-        <li>Бабочка<input type="checkbox" class="babochka"></li>
-        <br>
+            <li><label>Мафия</label><input type="number" class="form-control user-form mafia mafia-new" placeholder="5" required></li>
+            <li>Мирные жители<input type="number" class="form-control user-form people mafia-new" placeholder="5"></li>
+            <li>Маньяк<input type="checkbox" class="manjak"></li>
+            <br>
+            <li>Комиссар<input type="checkbox" class="komisar"></li>
+            <br>
+            <li>Доктор<input type="checkbox" class="doctor"></li>
+            <br>
+            <li>Шериф<input type="checkbox" class="sherif"></li>
+            <br>
+            <li>Бабочка<input type="checkbox" class="babochka"></li>
+            <br>
         </ul>
     </div>
+    <div class="help-pannel hiden ">
+        <input type="text" class="form-control user-form help-form-name" required placeholder="Максим" id="help-name-pole">
+        <!-- <input type="text" class="form-control user-form help-form-name" required placeholder="Мафия" id="help-role-pole"> -->
+        <button type="button" class="btn btn-outline-success button-plus-user">+</button>
+        <div class="btn-group">
+            <button type="button" class="btn btn-danger dropdown-toggle user-form help-form-name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"  id="help-role-pole">
+              Мафия
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Мафия</a>
+              <a class="dropdown-item" href="#">Маньяк</a>
+              <a class="dropdown-item" href="#">Комиссар</a>
+              <a class="dropdown-item" href="#">Доктор</a>
+              <a class="dropdown-item" href="#">Шериф</a>
+              <a class="dropdown-item" href="#">Бабочка</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">МЖ</a>
+            </div>
+          </div>
+        <p class="help-pannel-roles"></p>
+    </div>
+    <button type="button" class="btn btn-warning button-help">Помошник Ведущему</button>
+    <br>
     <button type="button" class="btn btn-dark button-action">Настроить вручную</button>
     <br>
     <button type="button" class="btn btn-primary action">Получить роли</button>
-    <p></p>
+    <p class="auto-p"></p>
     <!-- scripts -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>

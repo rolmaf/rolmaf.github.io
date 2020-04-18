@@ -6,7 +6,23 @@ document.querySelector(".action").onclick = function(){
         auto();
     }
 }
-
+document.querySelector(".button-help").onclick = function(){
+    if (document.querySelector(".button-help").innerHTML == "Обновить") {
+        document.querySelector(".help-pannel-roles").innerHTML = "";
+        a = "";
+    }
+    function_hiden_3();
+}
+document.querySelector(".dropdown-menu").onclick = function() {
+    document.querySelector("#help-role-pole").innerHTML = event.target.innerHTML;
+    // console.log(event.target.innerHTML);
+}
+document.querySelector(".button-plus-user").onclick = function() {
+    document.querySelector(".help-pannel-roles").innerHTML += document.querySelector("#help-name-pole").value + "  -  " + document.querySelector("#help-role-pole").innerHTML + "<br>";
+    
+    // console.log(document.querySelector("#help-name-pole").value);
+    // console.log(document.querySelector("#help-role-pole").value);
+}
 function hand() {       
     let mafia = document.querySelector(".mafia").value;
     let people = document.querySelector(".people").value;
@@ -15,7 +31,7 @@ function hand() {
     let sherif = document.querySelector(".sherif").checked;
     let babochka = document.querySelector(".babochka").checked;
     let komisar = document.querySelector(".komisar").checked;
-    document.querySelector("p").innerHTML="";
+    document.querySelector(".auto-p").innerHTML="";
     console.log("Маньяк: " + manjak);
     console.log("Мирные жители: " , people);
     console.log("Мафия " + mafia);
@@ -53,19 +69,17 @@ function hand() {
             area_rand2.push(random);
         }
         console.log(i_new_2 + "   " + roles[random]);
-        document.querySelector("p").innerHTML += i_new_2 + "   " + roles[random] + "<br>";
+        document.querySelector(".auto-p").innerHTML += i_new_2 + "   " + roles[random] + "<br>";
         i_new_2 = i_new_2 + 1;
     }
     // console.log(roles);
 }
 
-let element = document.querySelector(".settings");
-let element_2 = document.querySelector(".form-row");
 
 
 document.querySelector(".button-action").onclick = function() {
     if (document.querySelector(".button-action").innerHTML == "Вернуться назад") {
-        document.querySelector("p").innerHTML = "";
+        document.querySelector(".auto-p").innerHTML = "";
         function_hiden_1();
     }
     else {
@@ -73,19 +87,41 @@ document.querySelector(".button-action").onclick = function() {
     }
 }
 
+let element = document.querySelector(".settings");
+let element_2 = document.querySelector(".form-row");
+let element_3 = document.querySelector(".action");
+let element_4 = document.querySelector(".help-pannel");
+let element_5 = document.querySelector(".button-help");
+let element_6 = document.querySelector(".help-pannel-roles");
 
 function function_hiden_1() {
     document.querySelector(".button-action").innerHTML = "Настроить вручную";
     element.classList.add("hiden");
     element_2.classList.remove("hiden");
+    element_3.classList.remove("hiden");
+    element_5.innerHTML = "Помошник Ведущему";
+    element_4.classList.add("hiden");
+    // element_6.classList.add("hiden_2");
 }
-
 
 function function_hiden_2() {
     document.querySelector(".button-action").innerHTML = "Вернуться назад";
     element.classList.remove("hiden");
+    element_5.innerHTML = "Помошник Ведущему";
     element_2.classList.add("hiden");
+    element_4.classList.add("hiden");
+    // element_6.classList.add("hiden_2");
 }
+function function_hiden_3() {
+    document.querySelector(".button-action").innerHTML = "Вернуться назад";
+    element_3.classList.add("hiden");
+    element.classList.add("hiden");
+    element_2.classList.add("hiden");
+    element_4.classList.remove("hiden");
+    element_5.innerHTML = "Обновить";
+    // element_6.classList.remove("hiden_2");
+}
+
 
 
 
@@ -113,7 +149,7 @@ function auto() {
             let roles_massiv = ["Мафия", "Комиссар" , "Доктор"]; 
             let mafia = Math.floor(kolichestvo_user / 3);
             let random_element_massiv = "";
-            document.querySelector("p").innerHTML = "";
+            document.querySelector(".auto-p").innerHTML = "";
             while (roles_massiv.length  != mafia + 2) {
                 roles_massiv.push("Мафия");
             }
@@ -134,10 +170,10 @@ function auto() {
                     area_rand.push(rand);
                 }
                 console.log(i_new + "   " + roles_massiv[rand]);
-                document.querySelector("p").innerHTML += i_new + "   " + roles_massiv[rand] + "<br>";
+                document.querySelector(".auto-p").innerHTML += i_new + "   " + roles_massiv[rand] + "<br>";
                 i_new = i_new + 1;
             }
-            document.querySelector("p").innerHTML += "Удачной вам игры!"
+            document.querySelector(".auto-p").innerHTML += "Удачной вам игры!"
             console.log("area_rand = " + area_rand  );
             console.log("Длина массива с людьми: " + kolichestvo_user_massiv.length);
             console.log("Массив с ролями: " + roles_massiv);

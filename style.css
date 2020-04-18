@@ -1,10 +1,10 @@
 button {
     margin: 10px;
     /* padding: 8px; */
-    width: 200px;
+    width: 220px;
 }
 .user-form {
-    width: 200px;
+    width: 220px;
 }
 #user-form {    
     margin: 10px;
@@ -33,3 +33,22 @@ input[type = "checkbox"] {
 label {
     margin-top: 6px;
 }
+.button-plus-user {
+    margin-top: 3px;
+    width: 40px;
+}
+.help-form-name {
+    margin: 0px;
+    width: 85px;
+    position: absolute;
+        top: 3px;
+        left: 56px;
+}
+#help-role-pole {
+    position: absolute;
+        top: -23px;
+        left: 82px;
+}
+/* .hiden_2 {
+    visibility: hidden;
+} */
