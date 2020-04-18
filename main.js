@@ -40,7 +40,7 @@ function hand() {
         roles.push("Бабочка");
     }
     if (komisar == true) {
-        roles.push("Комисар");
+        roles.push("Комиссар");
     }
     let i_new_2 = 1;
     let area_rand2 = [];
@@ -110,7 +110,7 @@ function auto() {
             let index = 0;
             let schetchik2  = kolichestvo_user;
             let index_random_massiv = 0;
-            let roles_massiv = ["Мафия", "Комисар" , "Доктор"]; 
+            let roles_massiv = ["Мафия", "Комиссар" , "Доктор"]; 
             let mafia = Math.floor(kolichestvo_user / 3);
             let random_element_massiv = "";
             document.querySelector("p").innerHTML = "";
