@@ -1,5 +1,8 @@
 document.querySelector(".action").onclick = function(){
-    if (document.querySelector(".button-action").innerHTML == "Вернуться назад"){
+    if (document.querySelector(".action").innerHTML == "Подтвердить") {
+
+    }
+    else if (document.querySelector(".button-action").innerHTML == "Вернуться назад"){
         hand()
     }
     else {
@@ -31,6 +34,7 @@ function hand() {
     let sherif = document.querySelector(".sherif").checked;
     let babochka = document.querySelector(".babochka").checked;
     let komisar = document.querySelector(".komisar").checked;
+    let jakudza = document.querySelector(".jakudza").checked;
     document.querySelector(".auto-p").innerHTML="";
     console.log("Маньяк: " + manjak);
     console.log("Мирные жители: " , people);
@@ -57,6 +61,9 @@ function hand() {
     }
     if (komisar == true) {
         roles.push("Комиссар");
+    }
+    if (jakudza == true) {
+        roles.push("Якудза");
     }
     let i_new_2 = 1;
     let area_rand2 = [];
@@ -93,14 +100,16 @@ let element_3 = document.querySelector(".action");
 let element_4 = document.querySelector(".help-pannel");
 let element_5 = document.querySelector(".button-help");
 let element_6 = document.querySelector(".help-pannel-roles");
+let element_7 = document.querySelector(".auto-p");
 
 function function_hiden_1() {
     document.querySelector(".button-action").innerHTML = "Настроить вручную";
     element.classList.add("hiden");
     element_2.classList.remove("hiden");
-    element_3.classList.remove("hiden");
+    element_3.innerHTML = "Получить роли";
     element_5.innerHTML = "Помошник Ведущему";
     element_4.classList.add("hiden");
+    element_7.innerHTML = "";
     // element_6.classList.add("hiden_2");
 }
 
@@ -108,17 +117,21 @@ function function_hiden_2() {
     document.querySelector(".button-action").innerHTML = "Вернуться назад";
     element.classList.remove("hiden");
     element_5.innerHTML = "Помошник Ведущему";
+    element_3.innerHTML = "Получить роли";
     element_2.classList.add("hiden");
     element_4.classList.add("hiden");
+    element_7.innerHTML = "";
     // element_6.classList.add("hiden_2");
 }
 function function_hiden_3() {
     document.querySelector(".button-action").innerHTML = "Вернуться назад";
-    element_3.classList.add("hiden");
+    // element_3.classList.add("hiden");
+    element_3.innerHTML = "Подтвердить";
     element.classList.add("hiden");
     element_2.classList.add("hiden");
     element_4.classList.remove("hiden");
     element_5.innerHTML = "Обновить";
+    element_7.innerHTML = "";
     // element_6.classList.remove("hiden_2");
 }
 
