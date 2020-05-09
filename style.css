@@ -24,7 +24,7 @@ p {
     margin-bottom: 5px;
     margin-left: -15px;
 }
-li {
+.btn-group li {
     margin-left: 5px;
 }
 input[type = "checkbox"] {
@@ -41,7 +41,7 @@ label {
     margin: 0px;
     width: 85px;
     position: absolute;
-        top: 3px;
+        top: 75px;
         left: 48px;
 }
 #help-role-pole {
@@ -53,3 +53,14 @@ label {
 /* .hiden_2 {
     visibility: hidden;
 } */
+.logo-navbar {
+    width: 40px;
+    transition: 1s;
+}
+.logo-navbar:hover {
+    transition: 1s;
+    transform: rotate(360deg)
+}
+.navbar {
+    font-size: 12pt;
+}

@@ -107,7 +107,7 @@ function function_hiden_1() {
     element.classList.add("hiden");
     element_2.classList.remove("hiden");
     element_3.innerHTML = "Получить роли";
-    element_5.innerHTML = "Помощник Ведущему";
+    element_5.innerHTML = "Помошник Ведущему";
     element_4.classList.add("hiden");
     element_7.innerHTML = "";
     // element_6.classList.add("hiden_2");
@@ -116,7 +116,7 @@ function function_hiden_1() {
 function function_hiden_2() {
     document.querySelector(".button-action").innerHTML = "Вернуться назад";
     element.classList.remove("hiden");
-    element_5.innerHTML = "Помощник Ведущему";
+    element_5.innerHTML = "Помошник Ведущему";
     element_3.innerHTML = "Получить роли";
     element_2.classList.add("hiden");
     element_4.classList.add("hiden");
