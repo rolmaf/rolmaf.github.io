@@ -159,6 +159,7 @@ function auto() {
             let index = 0;
             let schetchik2  = kolichestvo_user;
             let index_random_massiv = 0;
+
             let roles_massiv = ["Мафия", "Комиссар" , "Доктор"]; 
             let mafia = Math.floor(kolichestvo_user / 3);
             let random_element_massiv = "";
@@ -174,6 +175,9 @@ function auto() {
                 i = i + 1;
             }
             let rand;
+
+            let numbersCheckbox = document.querySelector('#get-new-numbers').checked
+
             for (let schetchik = 0;schetchik < kolichestvo_user_massiv.length;schetchik = schetchik + 1)   {
                 rand =  Math.floor(Math.random() * kolichestvo_user_massiv.length)
                 while (area_rand.indexOf(rand) != -1) {     
@@ -183,7 +187,7 @@ function auto() {
                     area_rand.push(rand);
                 }
                 console.log(i_new + "   " + roles_massiv[rand]);
-                document.querySelector(".auto-p").innerHTML += i_new + "   " + roles_massiv[rand] + "<br>";
+                document.querySelector(".auto-p").innerHTML += i_new + ' : ' + (numbersCheckbox ? (rand+1).toString() + ' : ' : '') + roles_massiv[rand] + "<br>";
                 i_new = i_new + 1;
             }
             document.querySelector(".auto-p").innerHTML += "Удачной вам игры!"
